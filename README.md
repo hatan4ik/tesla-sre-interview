@@ -1,0 +1,39 @@
+# Tesla SRE / DevOps Interview Preparation
+
+Principal-level preparation for system design, Kubernetes/platform engineering, incident response, reliability, scalability, security, and technical leadership.
+
+> This repository is an independent interview study guide. It does not describe or claim knowledge of Tesla's internal architecture.
+
+## Contents
+
+- [Round 1 — Kubernetes, GitOps, Cloud & Platform Engineering](docs/round-1-platform-engineering.md)
+- [Round 2 — Incident Response, Debugging & Reliability](docs/round-2-incident-response.md)
+- [Round 3 — System Design, Scalability & Leadership](docs/round-3-system-design.md)
+- [Interview Framework, Follow-ups and Red Flags](docs/interview-playbook.md)
+
+## Principal-level answer framework
+
+Use this sequence for every architecture problem:
+
+1. Clarify requirements and scale.
+2. Quantify latency, throughput, availability, RTO and RPO.
+3. Define safety and correctness invariants.
+4. Separate control plane from data plane.
+5. Partition into bounded failure domains.
+6. Select consistency per data type.
+7. Design retries, idempotency, backpressure and failure recovery.
+8. Add security, auditability and privacy.
+9. Define SLIs, SLOs and operational signals.
+10. Explain trade-offs and an incremental delivery path.
+
+## Core connected-vehicle principle
+
+The cloud requests an action; the vehicle remains the final authority. Every command should be authenticated, authorized, signed, time-bounded, replay-protected, idempotent, auditable, and evaluated against local vehicle safety policy.
+
+## Strong 90-second opening
+
+> I will start by defining the customer operation, availability target, latency boundary, consistency requirement, and safety invariants. For connected vehicles I assume intermittent connectivity, duplicate delivery, stale state, and partial regional failure are normal conditions rather than exceptions.
+>
+> I would partition the platform into autonomous regional cells, separate control and data planes, and avoid synchronous cross-region dependencies on the critical path. Commands would be durably recorded, idempotent, signed, time-bounded, replay-protected, and correlated end to end. The vehicle remains the final authority for local safety checks.
+>
+> I would choose consistency by data type: strong consistency for authorization and command ownership, and eventual consistency for presence and telemetry-derived views. Delivery would use progressive exposure, measurable SLOs, bounded retries, automatic rollback, and continuous failure testing.
