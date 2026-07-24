@@ -7,6 +7,7 @@ Principal-level preparation for system design, Kubernetes/platform engineering, 
 ## Contents
 
 - [Round 1 — Kubernetes, GitOps, Cloud & Platform Engineering](docs/round-1-platform-engineering.md)
+  - [Chapter 1 — Highly Available Kubernetes for Millions of Connected Vehicles](docs/round-1/01-ha-kubernetes-connected-vehicles.md)
 - [Round 2 — Incident Response, Debugging & Reliability](docs/round-2-incident-response.md)
 - [Round 3 — System Design, Scalability & Leadership](docs/round-3-system-design.md)
 - [Interview Framework, Follow-ups and Red Flags](docs/interview-playbook.md)
