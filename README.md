@@ -4,6 +4,8 @@ Principal-level preparation for system design, Kubernetes/platform engineering, 
 
 > This repository is an independent interview study guide. It does not describe or claim knowledge of Tesla's internal architecture.
 
+> **Canonical shared foundations:** Reusable Linux, Kubernetes, networking, cloud, service-mesh, eBPF, Terraform, observability, reliability, and leadership chapters are maintained in [`hatan4ik/staff-sre-platform-engineering-handbook`](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook). This repository owns Tesla/connected-vehicle scenarios, safety invariants, interview adapters, and mock interviews. Existing duplicated foundations remain migration sources until coverage parity is verified.
+
 ## Contents
 
 - [Round 1 — Kubernetes, GitOps, Cloud & Platform Engineering](docs/round-1-platform-engineering.md)
