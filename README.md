@@ -14,6 +14,20 @@ Principal-level preparation for system design, Kubernetes/platform engineering, 
 - [Round 3 — System Design, Scalability & Leadership](docs/round-3-system-design.md)
 - [Interview Framework, Follow-ups and Red Flags](docs/interview-playbook.md)
 
+## Shared canonical prerequisites
+
+Use these chapters for reusable theory instead of creating another Tesla-specific copy:
+
+- [Linux Internals module](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/tree/main/core/linux)
+  - [Architecture, boot, PID 1, systemd, and syscalls](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/01-architecture-boot-syscalls.md)
+  - [Processes, scheduling, interrupts, cgroup CPU, and load](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/02-processes-scheduler.md)
+  - [Memory, page cache, NUMA, reclaim, PSI, and OOM](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/03-memory.md)
+  - [VFS, filesystems, block I/O, NVMe, and latency](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/04-storage-io.md)
+- [eBPF, Cilium, Hubble, Falco, and Tetragon](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/ebpf-security/cilium-hubble-falco-tetragon.md)
+- [Consolidated curriculum map](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/curriculum-map.md)
+
+The existing `docs/foundations/01-linux-internals/` files are preserved as migration sources. New generic Linux material should be added to the shared handbook. Tesla files should add only connected-vehicle implications, such as command safety, fleet telemetry, OTA behavior, intermittent connectivity, and vehicle-local authority.
+
 ## Principal-level answer framework
 
 Use this sequence for every architecture problem:
