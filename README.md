@@ -4,7 +4,7 @@ Principal-level preparation for system design, Kubernetes/platform engineering, 
 
 > This repository is an independent interview study guide. It does not describe or claim knowledge of Tesla's internal architecture.
 
-> **Canonical shared foundations:** Reusable Linux, Kubernetes, networking, cloud, service-mesh, eBPF, Terraform, observability, reliability, and leadership chapters are maintained in [`hatan4ik/staff-sre-platform-engineering-handbook`](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook). This repository owns Tesla/connected-vehicle scenarios, safety invariants, interview adapters, and mock interviews. Existing duplicated foundations remain migration sources until coverage parity is verified.
+> **Canonical shared foundations:** Reusable Linux, Kubernetes, networking, cloud, service-mesh, eBPF, Terraform, GitOps, workload identity, autoscaling, observability, reliability, and leadership chapters are maintained in [`hatan4ik/staff-sre-platform-engineering-handbook`](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook). This repository owns Tesla/connected-vehicle scenarios, safety invariants, interview adapters, and mock interviews. Existing duplicated foundations remain migration sources until coverage parity is verified.
 
 ## Contents
 
@@ -23,10 +23,18 @@ Use these chapters for reusable theory instead of creating another Tesla-specifi
   - [Processes, scheduling, interrupts, cgroup CPU, and load](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/02-processes-scheduler.md)
   - [Memory, page cache, NUMA, reclaim, PSI, and OOM](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/03-memory.md)
   - [VFS, filesystems, block I/O, NVMe, and latency](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/04-storage-io.md)
+  - [Networking, namespaces, cgroups, containers, and Linux security](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/05-networking-containers-security.md)
+  - [Observability, profiling, eBPF, and production debugging](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/06-observability-debugging.md)
+  - [Linux incident labs and production scenarios](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/linux/07-linux-incident-labs.md)
+- [Workload identity, federation, SPIFFE, and cloud-native authorization](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/security/identity/workload-identity-federation.md)
+- [Kubernetes autoscaling control loops and capacity realization](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/kubernetes/autoscaling/control-loops-capacity-realization.md)
+- [GitOps and progressive delivery](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/delivery-gitops/gitops-progressive-delivery.md)
+- [Service discovery with Envoy, Istio, and xDS](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/service-mesh/fine-grained-service-discovery.md)
 - [eBPF, Cilium, Hubble, Falco, and Tetragon](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/ebpf-security/cilium-hubble-falco-tetragon.md)
+- [Terraform state integrity and recovery](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/core/infrastructure-as-code/terraform-state-integrity.md)
 - [Consolidated curriculum map](https://github.com/hatan4ik/staff-sre-platform-engineering-handbook/blob/main/curriculum-map.md)
 
-The existing `docs/foundations/01-linux-internals/` files are preserved as migration sources. New generic Linux material should be added to the shared handbook. Tesla files should add only connected-vehicle implications, such as command safety, fleet telemetry, OTA behavior, intermittent connectivity, and vehicle-local authority.
+The existing `docs/foundations/01-linux-internals/` files are preserved as migration sources. New generic Linux, identity, autoscaling, GitOps, or Kubernetes material should be added to the shared handbook. Tesla files should add only connected-vehicle implications, such as command safety, fleet telemetry, OTA behavior, intermittent connectivity, device identity, rollout cohorts, and vehicle-local authority.
 
 ## Principal-level answer framework
 
